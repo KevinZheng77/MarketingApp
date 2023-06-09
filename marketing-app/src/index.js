@@ -1,19 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import img1 from './img/img1.png';
-import SingleComment from './singleComment';
 
 const App = () => {
+    window.navigator.geolocation.getCurrentPosition(
+        (position) => console.log(position),
+        (error) => console.log(error)
+    );
     return(
-        <div className='ui comments'>
-            <SingleComment name ='Alex' />
-            <SingleComment name ='Jack'/>
-            <SingleComment name = 'Sarah'/>
-        </div>
-    )
+        <div>Hello World!</div>
+    );
 }
 
 ReactDOM.render(
-    <App />,
+    <App/>,
     document.querySelector('#root')
 )
